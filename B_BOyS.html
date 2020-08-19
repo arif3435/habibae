@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>
+
+        </title>
+        <style>
+         
+            </style>
+    </head>
+    <body>
+      <body><body onload="type_text()" style="color:red; background-color: black; background-image: url(https://38.media.tumblr.com/tumblr_lsudn1Xqjy1qzunn4o1_400.gif);"></body>
+      
+      <BODY bgCOLOR="000000"TEXT="WHITE"> </BODY>
+             <div style="position:move; top: 70px; left: -100px; width: 200px; 
+        padding: 5px; font-size: 16px; text-align: down; 
+        color:white; font-family: 'trebuchet ms', 
+        verdana, arial, sans-serif;transform: rotate(-360deg);
+        transform-origin: 50% 0px;-o-transform: rotate(-45deg); 
+        -o-transform-origin: 50% 0px;-moz-transform: rotate(-45deg); -moz-transform-origin: 50% 0px;
+         -webkit-transform: rotate(-45deg); -webkit-transform-origin: 50% 0px; background-color: Transparent; 
+         border: 1px solid black; z-index: 9999; opacity: 0.5;">
+            <a href="https://www.facebook.com/PureHackers.Sec" style="text-decoration:none;color: white;  </a>
+<div  class="stars">
+  <center>
+    <h1></h1>
+  </center>
+</div>
+<div class="twinkling">
+  <Center><br><br><br>
+    <div class="container">
+      <div class="text"></div>
+      
+    </div><br><br><br>
+    <img src="https://i.ibb.co/nCP5TZz/B-BOyS.png"
+    " width="250"/><br>
+    <H1><MARQUEE>You have been hacked</H1></MARQUEE>
+    <font face="Sarpanch" color="white" size"18" class="message">
+      &nbsp;    <font color="red"> Upgrade Your Security</font> &nbsp; 
+     
+    
+    <font face="Play">
+      <p class="we-are"><b><font color="cyan"> OtherWisE You Will lose ALL OF YouRS DATA<font color="white"></b></p>
+    </font>
+    
+</center>
+</div>
+<div class="clouds">
+</div>
+<iframe width="1" height="1" 
+src="https://www.youtube.com/embed/v4SWvf0jBq8?rel=0&autoplay=1"  frameborder="0" allowfullscreen></iframe>
+<script> 
+  class TextScramble {
+  constructor(el) {
+    this.el = el
+    this.chars = '!@#$%^&*()_-=+{}:"|<>?,./;'
+    this.update = this.update.bind(this)
+  }
+  setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || ''
+      const to = newText[i] || ''
+      const start = Math.floor(Math.random() * 50)
+      const end = start + Math.floor(Math.random() * 50)
+      this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+  }
+  update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; ++i) {
+      let { from, to, start, end, char } = this.queue[i]
+      if (this.frame >= end) {
+        complete++
+        output += to
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar()
+          this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+      } else {
+        output += from
+      }
+    }
+    this.el.innerHTML = output
+    if (complete === this.queue.length) 
+    {
+        this.resolve()
+      } else {
+        this.frameRequest = requestAnimationFrame(this.update)
+        this.frame++
+      }
+    }
+    randomChar() {
+      return this.chars[Math.floor(Math.random() * this.chars.length)]
+    }
+    }const phrases = [
+    'I AM NOt Criminal',
+    'I am a hacker',
+    'YOU HAVE Some Error in YOUR Site'
+    ]
+  const el = document.querySelector('.text')
+  const fx = new TextScramble(el)
+  
+  let counter = 0
+  const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+      setTimeout(next, 1500)
+    })
+    counter = (counter + 2) % phrases.length
+  }
+
+next()
+
+'use strict';
+var app = {
+chars: ['B_Boys','Black Hole','127.0.0.1','80','0x523344','Localhost','Cr4sH CoD3','HACKED!','Security','System'],
+init: function () {
+    app.container = document.createElement('div');
+    app.container.className = 'animation-container';
+    document.body.appendChild(app.container);
+    window.setInterval(app.add, 90);
+  },
+
+  add: function () {
+    var element = document.createElement('span');
+    app.container.appendChild(element);
+    app.animate(element);
+  },
+  animate: function (element) {
+    var character = app.chars[Math.floor(Math.random() * app.chars.length)];
+    var duration = Math.floor(Math.random() * 15) + 2;
+    var offset = Math.floor(Math.random() * (50 - duration * 4)) + 3;
+    var size = 10 + (15 - duration);
+    element.style.cssText = 'right:'+offset+'vw; font-size:'+size+'px;animation-duration:'+duration+'s';
+    element.innerHTML = character;
+    window.setTimeout(app.remove, duration * 1000, element);
+  },
+remove: function (element) {
+    element.parentNode.removeChild(element);
+  },
+};
+document.addEventListener('DOMContentLoaded', app.init);
+</script>
+
+    </body>
+    
+</html>
